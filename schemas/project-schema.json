@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Developer Project Registry",
+  "type": "object",
+  "required": [
+    "projectName",
+    "developer",
+    "repository",
+    "technology",
+    "deviceType",
+    "version"
+  ],
+  "properties": {
+    "projectName": {
+      "type": "string"
+    },
+    "developer": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "technology": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deviceType": {
+      "type": "string"
+    },
+    "supportedActions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PLANNING",
+        "DEVELOPMENT",
+        "TESTING",
+        "COMPLETED"
+      ]
+    }
+  }
+}
